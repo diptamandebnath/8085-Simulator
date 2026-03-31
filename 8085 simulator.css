@@ -1,22 +1,90 @@
 .grey{
-  background-color: #606060;
+  background-color: #2a2d3f;
 }
 *{
-	margin:auto;
+  box-sizing: border-box;
+}
+html, body{
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: linear-gradient(145deg, #10131c 0%, #20263a 100%);
+  color: #e2e7f2;
+  min-height: 100%;
 }
 body{
-	display:flex;
-	flex-direction:cloumn;
-	background:red;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 16px;
 }
-body>div:first-child{
-	flex-grow:1;
+body > div{
+  background: rgba(18, 22, 40, 0.95);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 18px 45px rgba(2,8,20,0.35);
+  width: min(95vw, 1180px);
+  padding: 20px;
 }
-body>div:nth-child(2){
-	background:white;
-	padding-left:8px;
-	padding-right:8px;
+textarea, input[type=text], input[type=number], button{
+  font-family: inherit;
+  font-size: 0.95rem;
 }
-body>div:last-child{
-	flex-grow:1;
+textarea{
+  width: 100%;
+  min-height: 180px;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 161, 193, 0.4);
+  background: rgba(25, 31, 47, 0.9);
+  color: #f1f4ff;
+  padding: 12px;
+  resize: vertical;
+}
+input[type=text], input[type=number] {
+  border: 1px solid rgba(148, 161, 193, 0.4);
+  background: rgba(22, 27, 45, 0.95);
+  color: #e9edff;
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin: 4px 0;
+}
+button{
+  background: linear-gradient(135deg, #5470f5 0%, #6e8ef2 100%);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  color: white;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .2s ease;
+}
+button:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(53, 102, 231, 0.4);
+}
+button:active{
+  transform: translateY(1px);
+}
+table{
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(18, 23, 41, 0.95);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+th, td{
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 8px;
+  text-align: center;
+  font-size: 0.85rem;
+}
+th{
+  background: rgba(67, 82, 137, 0.4);
+  color: #f4f7ff;
+}
+td{
+  background: rgba(31, 38, 63, 0.7);
+}
+#registerTable, #memoryTable, #IOTable{
+  margin: 12px 0;
+  border-radius: 12px;
+  overflow: hidden;
 }
