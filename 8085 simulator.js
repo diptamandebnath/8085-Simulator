@@ -645,25 +645,11 @@ function checkArg(argLength,argCat=null){ // argCat=0 for Registers, 1 for 8-bit
 }
 
 function isHex(x){
-	for(var i=0,l=x.length;i<l;++i)
-	switch(x[i]){
-		case "0" :
-		case "1" :
-		case "2" :
-		case "3" :
-		case "4" :
-		case "5" :
-		case "6" :
-		case "7" :
-		case "8" :
-		case "9" :
-		case "A" :
-		case "B" :
-		case "C" :
-		case "D" :
-		case "E" :
-		case "F" :
-		default : return false;
+	if(!x || typeof x !== 'string' || x.length===0) return false;
+	for(var i=0,l=x.length;i<l;++i){
+		var c=x[i];
+		if("0123456789ABCDEF".indexOf(c)===-1)
+			return false;
 	}
 	return true;
 }
@@ -1804,7 +1790,7 @@ function getInstructionCode(){
 		case "D6" : instruction="SUI" ;
 					args[0]=getCode();
 				break;
-		case "DE" : instruction="SBB" ;
+		case "DE" : instruction="SBI" ;
 					args[0]=getCode();
 				break;
 		case "3C" : instruction="INR" ;
