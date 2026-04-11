@@ -16,9 +16,13 @@ A simple and interactive **8085 Microprocessor Simulator** that allows users to 
 ---
 
 ## 📂 Project Structure
-├── index.html # Main UI
-├── style.css # Styling
-├── Binary Data.js # logics
-├── script.js # Core logic
-├── assets/ # Images / icons
-└── README.md # Documentation
+8085-simulator/
+│
+├── index.html        # Main UI
+├── style.css         # Styling
+├── script.js         # Core logic
+├── binary-data.js    # Binary & data handling logic
+│
+├── assets/           # Images / icons
+│
+└── README.md         # Documentation
